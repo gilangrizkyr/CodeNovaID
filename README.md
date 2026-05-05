@@ -1,70 +1,89 @@
-# CodeIgniter 4 Application Starter
+# CodeNova Indonesia - Enterprise IT Solutions Platform
 
-## What is CodeIgniter?
+CodeNova adalah platform CMS (Content Management System) kustom berbasis **CodeIgniter 4** yang dirancang khusus untuk perusahaan teknologi, agensi kreatif, dan konsultan IT. Platform ini menggabungkan profil perusahaan yang premium dengan fitur operasional bisnis yang lengkap.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+---
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## 🚀 Fitur Utama
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+### 1. **Public Interface (High Performance)**
+*   **Landing Page Dinamis**: Tampilan beranda modern dengan animasi marquee, slider tim, dan testimoni.
+*   **Katalog Layanan**: Penjelasan detail layanan IT dengan optimasi SEO di setiap halaman.
+*   **Portofolio & Studi Kasus**: Galeri proyek yang telah diselesaikan dengan filter kategori.
+*   **Digital Shop**: Penjualan produk digital (script, template, source code) dengan integrasi WhatsApp Checkout.
+*   **Blog & Insight**: Sistem manajemen artikel dengan penghitung jumlah tayangan (*view count*) dan optimasi SEO.
+*   **Profil Tim**: Halaman personal untuk setiap anggota tim yang menampilkan bio, keahlian, dan tautan sosial media.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+### 2. **Admin Dashboard (Enterprise Grade)**
+*   **Real-time Analytics**: Statistik interaksi klien (inquiry) dalam 7 hari terakhir menggunakan Chart.js.
+*   **Content Management System (CMS)**: Kelola semua konten (Service, Portfolio, Blog, Team, Clients) tanpa perlu menyentuh kode.
+*   **Inquiry Tracking**: Kelola pesan masuk dari calon klien dengan sistem *tracking code* otomatis.
+*   **Site Configuration**: Ubah logo, favicon, informasi kontak, hingga link sosial media langsung dari panel admin.
+*   **Sistem Log Aktivitas**: Pantau setiap perubahan yang dilakukan oleh admin untuk keamanan sistem.
 
-## Installation & updates
+---
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+## 🛠️ Tech Stack
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+*   **Backend**: PHP 8.2+ dengan Framework CodeIgniter 4.
+*   **Frontend**: HTML5, Tailwind CSS (Styling), Alpine.js (Interactivity).
+*   **Database**: MySQL / MariaDB.
+*   **Library**: 
+    *   `Chart.js` untuk visualisasi data.
+    *   `ImageProcessor` (Custom Library) untuk optimasi upload gambar.
+    *   `SeoHelper` untuk optimasi Meta Tag & Open Graph secara otomatis.
 
-## Setup
+---
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+## 📁 Struktur Direktori Penting
 
-## Important Change with index.php
+*   `app/Controllers/Admin/`: Logika bisnis untuk panel administrasi.
+*   `app/Controllers/Public/`: Logika tampilan sisi pengunjung.
+*   `app/Models/`: Definisi tabel database dan query data.
+*   `app/Views/admin/`: Template UI untuk Dashboard Admin.
+*   `app/Views/public/`: Template UI untuk Website Publik.
+*   `app/Views/layouts/`: Template dasar (Admin & Public).
+*   `public/uploads/`: Direktori penyimpanan aset gambar dan dokumen.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+---
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## ⚙️ Instalasi
 
-**Please** read the user guide for a better explanation of how CI4 works!
+1.  **Clone Repository**
+2.  **Konfigurasi Environment**:
+    *   Salin `env` menjadi `.env`.
+    *   Sesuaikan `database.default.hostname`, `database.default.database`, `username`, dan `password`.
+    *   Set `app.baseURL` ke URL lokal Anda (contoh: `http://localhost:8080`).
+3.  **Install Dependencies**:
+    ```bash
+    composer install
+    ```
+4.  **Migrasi Database**:
+    ```bash
+    php spark migrate
+    ```
+5.  **Seeding Data Produksi (Opsional)**:
+    ```bash
+    php spark db:seed SuperSeeder
+    ```
+6.  **Jalankan Server Lokal**:
+    ```bash
+    php spark serve
+    ```
 
-## Repository Management
+---
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+## 🔐 Kredensial Default (Development)
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+*   **URL Admin**: `http://localhost:8080/admin`
+*   **Email**: `admin@codenova.id`
+*   **Password**: `admin123`
 
-## Server Requirements
+---
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+## 📄 Lisensi
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+Platform ini dikembangkan secara eksklusif untuk **CodeNova Indonesia**. Penggunaan, penggandaan, atau modifikasi tanpa izin tertulis dari pemilik adalah dilarang.
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-# CodeNovaID
+---
+*© 2026 CodeNova Indonesia. Built for Excellence.*

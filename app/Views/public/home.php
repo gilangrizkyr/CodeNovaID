@@ -148,10 +148,19 @@
 </section>
 
 <!-- Services Section -->
-<section id="layanan" class="py-32 bg-slate-50/50">
-    <div class="container mx-auto px-4">
+<section id="layanan" class="relative py-32 bg-slate-50/50 overflow-hidden">
+    <!-- Decorative Background Shapes -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary-100 rounded-full filter blur-3xl opacity-50"></div>
+        <div class="absolute top-1/2 -right-24 w-64 h-64 bg-indigo-100 rounded-full filter blur-3xl opacity-50"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-20">
-            <h2 class="text-4xl font-display font-extrabold text-slate-900 mb-6">Layanan Unggulan Kami</h2>
+            <span class="inline-block py-1 px-3 mb-4 text-[10px] font-bold tracking-widest text-primary-600 uppercase bg-primary-100 rounded-full">
+                Our Expertise
+            </span>
+            <h2 class="text-4xl md:text-5xl font-display font-extrabold text-slate-900 mb-6">Layanan Unggulan Kami</h2>
             <p class="text-lg text-slate-500">Kami menyediakan berbagai solusi IT yang disesuaikan dengan kebutuhan bisnis Anda, mulai dari startup hingga korporasi.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -181,11 +190,19 @@
 </section>
 
 <!-- Portfolio Section -->
-<section class="py-32 bg-white">
-    <div class="container mx-auto px-4">
+<section class="relative py-32 bg-white overflow-hidden">
+    <!-- Background Watermark Text -->
+    <div class="absolute top-20 left-0 w-full h-full pointer-events-none opacity-[0.03] select-none">
+        <span class="text-[15rem] font-display font-black leading-none block transform -rotate-12 translate-x-1/4">CODENOVA PROJECTS</span>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
             <div class="max-w-2xl">
-                <h2 class="text-4xl font-display font-extrabold text-slate-900 mb-6">Kisah Sukses Klien Kami</h2>
+                <span class="inline-block py-1 px-3 mb-4 text-[10px] font-bold tracking-widest text-secondary uppercase bg-orange-100 text-orange-600 rounded-full">
+                    Featured Work
+                </span>
+                <h2 class="text-4xl md:text-5xl font-display font-extrabold text-slate-900 mb-6">Kisah Sukses Klien Kami</h2>
                 <p class="text-lg text-slate-500">Lihat bagaimana kami membantu berbagai bisnis mencapai tujuan digital mereka melalui solusi yang tepat guna.</p>
             </div>
             <div class="mt-8 md:mt-0">
